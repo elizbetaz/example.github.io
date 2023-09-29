@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отдел продаж нефтегазовой отрасли</title>
+    <link rel = "stylesheet" href = "style.css" type+"text/css/">
+</head>
+<body>
+    <h1>Отдел продаж нефтегазовой отрасли</h1>
+    <div class="quote">
+        <p class="commodity">Нефть</p>
+        <p class="status" id="oilStatus">Доступно</p>
+        <button class="buyButton" id="buyOil" onclick="toggleStatus('oilStatus', 'buyOil')">Купить</button>
+    </div>
+    <div class="quote">
+        <p class="commodity">Бензин</p>
+        <p class="status" id="gasolineStatus">Доступно</p>
+        <button class="buyButton" id="buyGasoline" onclick="toggleStatus('gasolineStatus', 'buyGasoline')">Купить</button>
+    </div>
+    <div class="quote">
+        <p class="commodity">Керосин</p>
+        <p class="status" id="keroseneStatus">Доступно</p>
+        <button class="buyButton" id="buyKerosene" onclick="toggleStatus('keroseneStatus', 'buyKerosene')">Купить</button>
+    </div>
+	<a href="http://google.com" target="_blank">google.com</a>
+    <script>
+        function toggleStatus(statusId, buttonId) {
+            const statusElement = document.getElementById(statusId);
+            const buttonElement = document.getElementById(buttonId);
+            if (statusElement.textContent === 'Доступно') {
+                statusElement.textContent = 'Продано';
+                buttonElement.textContent = 'Продать';
+            } else {
+                statusElement.textContent = 'Доступно';
+                buttonElement.textContent = 'Купить';
+            }
+        }
+    </script>
+</body>
+</html>
